@@ -9,25 +9,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.retrofit.Model.JsonPhPhotos;
-import com.example.retrofit.Model.JsonPhPosts;
 import com.example.retrofit.R;
 
 import java.util.List;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
+public class PhotosAdapter extends RecyclerView.Adapter<CustomViewHolder> {
 
     List<JsonPhPhotos> mPhotoList;
-    List<JsonPhPosts> mPostList;
     private Context context;
 
-    public CustomAdapter(Context photoContext, List<JsonPhPhotos> photoList){
+    public PhotosAdapter(Context photoContext, List<JsonPhPhotos> photoList){
         this.context = photoContext;
         this.mPhotoList = photoList;
-    }
-
-    public CustomAdapter(Context postContext, List<JsonPhPosts> postList, Integer id){
-        this.context = postContext;
-        this.mPostList = postList;
     }
 
 

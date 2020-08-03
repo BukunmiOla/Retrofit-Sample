@@ -2,7 +2,7 @@ package com.example.retrofit.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class RetroPhoto {
+public class JsonPhPhotos {
     @SerializedName("albumId")
     private Integer albumId;
     @SerializedName("id")
@@ -14,13 +14,13 @@ public class RetroPhoto {
     @SerializedName("thumbnailUrl")
     private String thumbnailUrl;
 
-    public RetroPhoto(Integer albumId, Integer id, String title, String url, String thumbnailUrl) {
-        this.albumId = albumId;
-        this.id = id;
-        this.title = title;
-        this.url = url;
-        this.thumbnailUrl = thumbnailUrl;
-    }
+//    public JsonPhPhotos(Integer albumId, Integer id, String title, String url, String thumbnailUrl) {
+//        this.albumId = albumId;
+//        this.id = id;
+//        this.title = title;
+//        this.url = url;
+//        this.thumbnailUrl = thumbnailUrl;
+//    }
 
     public Integer getAlbumId() {
         return albumId;

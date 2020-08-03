@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/action_post"
+        android:title="Posts" />
+    <item
+        android:id="@+id/action_comments"
+        android:title="Comments" />
+    <item
+        android:id="@+id/action_album"
+        android:title="Albums" />
+    <item
+        android:id="@+id/action_photos"
+        android:title="Photos" />
+    <item
+        android:id="@+id/action_todos"
+        android:title="TODOS" />
+    <item
+        android:id="@+id/action_users"
+        android:title="Users" />
 </menu>
