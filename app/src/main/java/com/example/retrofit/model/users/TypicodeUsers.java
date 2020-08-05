@@ -1,8 +1,8 @@
-package com.example.retrofit.Model.users;
+package com.example.retrofit.model.users;
 
 import com.google.gson.annotations.SerializedName;
 
-public class JsonPhUsers{
+public class TypicodeUsers {
 
 	@SerializedName("website")
 	private String website;
@@ -28,12 +28,19 @@ public class JsonPhUsers{
 	@SerializedName("username")
 	private String username;
 
+
+
 	public String getWebsite(){
 		return website;
 	}
 
-	public Address getAddress(){
-		return address;
+	public String getAddress(){
+
+			String addressStr = address.getSuite()+ ", " + address.getStreet()+ ", " +address.getCity()+ ", GeoLocation:"
+					+address.getGeo()+ ", Zip Code: " +address.getZipcode();
+
+
+		return addressStr;
 	}
 
 	public String getPhone(){
@@ -44,8 +51,9 @@ public class JsonPhUsers{
 		return name;
 	}
 
-	public Company getCompany(){
-		return company;
+	public String getCompany(){
+		 String companyStr = company.getName() + ", " + company.getBs()  + ", " + company.getCatchPhrase();
+		return companyStr;
 	}
 
 	public int getId(){

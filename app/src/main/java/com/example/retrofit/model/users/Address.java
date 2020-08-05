@@ -1,4 +1,4 @@
-package com.example.retrofit.Model.users;
+package com.example.retrofit.model.users;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -19,12 +19,21 @@ public class Address{
 	@SerializedName("street")
 	private String street;
 
+//	public Address(String zipcode, Geo geo, String suite, String city,  String street) {
+//		this.zipcode = zipcode;
+//		this.geo = geo;
+//		this.suite = suite;
+//		this.city = city;
+//		this.street = street;
+//	}
+
 	public String getZipcode(){
 		return zipcode;
 	}
 
-	public Geo getGeo(){
-		return geo;
+	public String getGeo(){
+
+		return (geo.getLat()+ "(Lat) "+geo.getLng()+"(Lng)" );
 	}
 
 	public String getSuite(){

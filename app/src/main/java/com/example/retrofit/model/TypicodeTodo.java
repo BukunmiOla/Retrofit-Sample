@@ -1,8 +1,8 @@
-package com.example.retrofit.Model;
+package com.example.retrofit.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class JsonPhTodo{
+public class TypicodeTodo {
 
 	@SerializedName("id")
 	private int id;
@@ -16,7 +16,7 @@ public class JsonPhTodo{
 	@SerializedName("userId")
 	private int userId;
 
-//	public JsonPhTodo(int userId, int id, String title, Boolean completed) {
+//	public TypicodeTodo(int userId, int id, String title, Boolean completed) {
 //		this.userId = userId;
 //		this.id = id;
 //		this.title = title;

@@ -1,8 +1,8 @@
-package com.example.retrofit.Model;
+package com.example.retrofit.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class JsonPhPhotos {
+public class TypicodePhotos {
     @SerializedName("albumId")
     private Integer albumId;
     @SerializedName("id")
@@ -14,7 +14,7 @@ public class JsonPhPhotos {
     @SerializedName("thumbnailUrl")
     private String thumbnailUrl;
 
-//    public JsonPhPhotos(Integer albumId, Integer id, String title, String url, String thumbnailUrl) {
+//    public TypicodePhotos(Integer albumId, Integer id, String title, String url, String thumbnailUrl) {
 //        this.albumId = albumId;
 //        this.id = id;
 //        this.title = title;

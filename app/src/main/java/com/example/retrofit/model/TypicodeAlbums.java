@@ -1,8 +1,8 @@
-package com.example.retrofit.Model;
+package com.example.retrofit.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class JsonPhAlbums{
+public class TypicodeAlbums {
 
 	@SerializedName("userId")
 	private int userId;
@@ -13,7 +13,7 @@ public class JsonPhAlbums{
 	@SerializedName("id")
 	private int id;
 
-//	public JsonPhAlbums(int userId, int id, String title) {
+//	public TypicodeAlbums(int userId, int id, String title) {
 //		this.userId = userId;
 //		this.id = id;
 //		this.title = title;
@@ -30,4 +30,5 @@ public class JsonPhAlbums{
 	public int getId(){
 		return id;
 	}
+
 }

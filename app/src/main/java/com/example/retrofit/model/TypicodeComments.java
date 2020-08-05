@@ -1,8 +1,8 @@
-package com.example.retrofit.Model;
+package com.example.retrofit.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class JsonPhComments{
+public class TypicodeComments {
 
 	@SerializedName("email")
 	private String email;
@@ -19,7 +19,7 @@ public class JsonPhComments{
 	@SerializedName("name")
 	private String name;
 
-//	public JsonPhComments(String email, int id, String body, int postID,  String name) {
+//	public TypicodeComments(String email, int id, String body, int postID,  String name) {
 //		this.email = email;
 //		this.id = id;
 //		this.body = body;

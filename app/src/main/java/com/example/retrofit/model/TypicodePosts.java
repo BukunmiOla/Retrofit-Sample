@@ -1,8 +1,8 @@
-package com.example.retrofit.Model;
+package com.example.retrofit.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class JsonPhPosts {
+public class TypicodePosts {
 
 	@SerializedName("userId")
 	private int userId;
@@ -16,7 +16,7 @@ public class JsonPhPosts {
 	@SerializedName("body")
 	private String body;
 
-//	public JsonPhPosts(int userId,  String title, int id, String body) {
+//	public TypicodePosts(int userId,  String title, int id, String body) {
 //		this.userId = userId;
 //		this.id = id;
 //		this.title = title;
