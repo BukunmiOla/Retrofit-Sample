@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Retrofit</string>
+    <string name="dummy_api_name">Dummy API</string>
 </resources>

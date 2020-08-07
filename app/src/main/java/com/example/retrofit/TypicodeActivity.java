@@ -1,11 +1,9 @@
 package com.example.retrofit;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,19 +11,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.retrofit.model.GetDataService;
-import com.example.retrofit.model.TypicodeAlbums;
-import com.example.retrofit.model.TypicodeComments;
-import com.example.retrofit.model.TypicodePhotos;
-import com.example.retrofit.model.TypicodePosts;
-import com.example.retrofit.model.TypicodeTodo;
-import com.example.retrofit.model.users.TypicodeUsers;
-import com.example.retrofit.adapter.AlbumAdapter;
-import com.example.retrofit.adapter.CommentsAdapter;
-import com.example.retrofit.adapter.PhotosAdapter;
-import com.example.retrofit.adapter.PostsAdapter;
-import com.example.retrofit.adapter.ToDoAdapter;
-import com.example.retrofit.adapter.UsersAdapter;
+import com.example.retrofit.typicodemodel.GetDataService;
+import com.example.retrofit.typicodemodel.TypicodeAlbums;
+import com.example.retrofit.typicodemodel.TypicodeComments;
+import com.example.retrofit.typicodemodel.TypicodePhotos;
+import com.example.retrofit.typicodemodel.TypicodePosts;
+import com.example.retrofit.typicodemodel.TypicodeTodo;
+import com.example.retrofit.typicodemodel.users.TypicodeUsers;
+import com.example.retrofit.typicodeadapter.AlbumAdapter;
+import com.example.retrofit.typicodeadapter.CommentsAdapter;
+import com.example.retrofit.typicodeadapter.PhotosAdapter;
+import com.example.retrofit.typicodeadapter.PostsAdapter;
+import com.example.retrofit.typicodeadapter.ToDoAdapter;
+import com.example.retrofit.typicodeadapter.UsersAdapter;
 import com.example.retrofit.network.RetrofitClientInstance;
 
 import java.util.List;
@@ -42,9 +40,9 @@ public class TypicodeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_typicode);
+        setContentView(R.layout.activity_container);
 
-        customRv = findViewById(R.id.customRV);
+        customRv = findViewById(R.id.display_rv);
         progressDialog = new ProgressDialog(TypicodeActivity.this);
         showPhotos();
 
