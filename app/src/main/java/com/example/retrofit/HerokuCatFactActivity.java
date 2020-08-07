@@ -17,6 +17,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.example.retrofit.network.RetrofitClientInstance.HEROKU_COM;
+
 public class HerokuCatFactActivity extends AppCompatActivity {
 
     RecyclerView customRv;
@@ -37,7 +39,7 @@ public class HerokuCatFactActivity extends AppCompatActivity {
         progressDialog.show();
 
         /*Create handle for the RetrofitInstance interface*/
-        GetHerokuDataService service = RetrofitClientInstance.getHerokuClientInstance().create(GetHerokuDataService.class);
+        GetHerokuDataService service = RetrofitClientInstance.getClientInstance(HEROKU_COM).create(GetHerokuDataService.class);
         Call<HerokuAll> call = service.getAllFacts();
         call.enqueue(new Callback<HerokuAll>() {
             @Override

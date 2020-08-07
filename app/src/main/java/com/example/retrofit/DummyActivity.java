@@ -19,6 +19,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.example.retrofit.network.RetrofitClientInstance.DUMMY_COM;
+
 public class DummyActivity extends AppCompatActivity {
 
     RecyclerView customRv;
@@ -40,7 +42,7 @@ public class DummyActivity extends AppCompatActivity {
         progressDialog.show();
 
         /*Create handle for the RetrofitInstance interface*/
-        GetDummyDataService service = RetrofitClientInstance.getDummyClientInstance().create(GetDummyDataService.class);
+        GetDummyDataService service = RetrofitClientInstance.getClientInstance(DUMMY_COM).create(GetDummyDataService.class);
         Call<List<DataItem>> call = service.getData();
         call.enqueue(new Callback<List<DataItem>>() {
             @Override

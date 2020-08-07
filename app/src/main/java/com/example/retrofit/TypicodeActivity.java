@@ -32,6 +32,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.example.retrofit.network.RetrofitClientInstance.TYPICODE_COM;
+
 public class TypicodeActivity extends AppCompatActivity {
 
     RecyclerView customRv;
@@ -85,7 +87,7 @@ public class TypicodeActivity extends AppCompatActivity {
         progressDialog.show();
 
         /*Create handle for the RetrofitInstance interface*/
-        GetDataService service = RetrofitClientInstance.getTypicodeClientInstance().create(GetDataService.class);
+        GetDataService service = RetrofitClientInstance.getClientInstance(TYPICODE_COM).create(GetDataService.class);
         Call<List<TypicodePosts>> call = service.getAllPosts();
         call.enqueue(new Callback<List<TypicodePosts>>() {
             @Override
@@ -113,7 +115,7 @@ public class TypicodeActivity extends AppCompatActivity {
         progressDialog.show();
 
         /*Create handle for the RetrofitInstance interface*/
-        GetDataService service = RetrofitClientInstance.getTypicodeClientInstance().create(GetDataService.class);
+        GetDataService service = RetrofitClientInstance.getClientInstance(TYPICODE_COM).create(GetDataService.class);
         Call<List<TypicodeComments>> call = service.getAllComments();
         call.enqueue(new Callback<List<TypicodeComments>>() {
             @Override
@@ -141,7 +143,7 @@ public class TypicodeActivity extends AppCompatActivity {
         progressDialog.show();
 
         /*Create handle for the RetrofitInstance interface*/
-        GetDataService service = RetrofitClientInstance.getTypicodeClientInstance().create(GetDataService.class);
+        GetDataService service = RetrofitClientInstance.getClientInstance(TYPICODE_COM).create(GetDataService.class);
         Call<List<TypicodeAlbums>> call = service.getAllAlbums();
         call.enqueue(new Callback<List<TypicodeAlbums>>() {
             @Override
@@ -169,7 +171,7 @@ public class TypicodeActivity extends AppCompatActivity {
         progressDialog.show();
 
         /*Create handle for the RetrofitInstance interface*/
-        GetDataService service = RetrofitClientInstance.getTypicodeClientInstance().create(GetDataService.class);
+        GetDataService service = RetrofitClientInstance.getClientInstance(TYPICODE_COM).create(GetDataService.class);
         Call<List<TypicodePhotos>> call = service.getAllPhotos();
         call.enqueue(new Callback<List<TypicodePhotos>>() {
             @Override
@@ -199,7 +201,7 @@ public class TypicodeActivity extends AppCompatActivity {
         progressDialog.show();
 
         /*Create handle for the RetrofitInstance interface*/
-        GetDataService service = RetrofitClientInstance.getTypicodeClientInstance().create(GetDataService.class);
+        GetDataService service = RetrofitClientInstance.getClientInstance(TYPICODE_COM).create(GetDataService.class);
         Call<List<TypicodeTodo>> call = service.getAllTodo();
         call.enqueue(new Callback<List<TypicodeTodo>>() {
             @Override
@@ -227,7 +229,7 @@ public class TypicodeActivity extends AppCompatActivity {
         progressDialog.show();
 
         /*Create handle for the RetrofitInstance interface*/
-        GetDataService service = RetrofitClientInstance.getTypicodeClientInstance().create(GetDataService.class);
+        GetDataService service = RetrofitClientInstance.getClientInstance(TYPICODE_COM).create(GetDataService.class);
         Call<List<TypicodeUsers>> call = service.getAllUsers();
         call.enqueue(new Callback<List<TypicodeUsers>>() {
             @Override
