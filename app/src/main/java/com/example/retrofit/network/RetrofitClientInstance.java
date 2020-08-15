@@ -8,8 +8,13 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClientInstance {
+    public static final String TYPICODE_COM = "https://jsonplaceholder.typicode.com";
+    public static final String HEROKU_COM = "https://cat-fact.herokuapp.com/";
+    public static final String POKE_COM = "https://pokeapi.co";
+    public static final String GOREST_COM = "https://gorest.co.in/";
 
-        private static OkHttpClient getHttpClient(){
+
+    private static OkHttpClient getHttpClient(){
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.level(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
@@ -27,6 +32,4 @@ public class RetrofitClientInstance {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
-
-
 }

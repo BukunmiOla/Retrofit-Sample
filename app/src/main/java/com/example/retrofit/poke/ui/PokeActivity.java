@@ -19,6 +19,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.example.retrofit.network.RetrofitClientInstance.POKE_COM;
+
 public class PokeActivity extends AppCompatActivity {
 
     RecyclerView customRv;
@@ -39,7 +41,7 @@ public class PokeActivity extends AppCompatActivity {
         progressDialog.show();
 
         /*Create handle for the RetrofitInstance interface*/
-        GetDataService service = RetrofitClientInstance.getClientInstance("https://pokeapi.co").create(GetDataService.class);
+        GetDataService service = RetrofitClientInstance.getClientInstance(POKE_COM).create(GetDataService.class);
         Call<List<PokeModel>> call = service.getAllDittos();
         call.enqueue(new Callback<List<PokeModel>>() {
             @Override
