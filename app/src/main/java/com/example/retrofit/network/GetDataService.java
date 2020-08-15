@@ -1,6 +1,4 @@
 package com.example.retrofit.network;
-
-import com.example.retrofit.dummy.model.DataItem;
 import com.example.retrofit.heroku.model.HerokuAll;
 import com.example.retrofit.poke.model.PokeModel;
 import com.example.retrofit.typicode.model.TypicodeAlbums;
@@ -33,9 +31,6 @@ public interface GetDataService {
 
     @GET("/users")
     Call<List<TypicodeUsers>> getAllUsers();
-
-    @GET("/api/v1/employee")
-    Call<List<DataItem>> getData();
 
     @GET("/facts")
     Call<HerokuAll> getAllFacts();
