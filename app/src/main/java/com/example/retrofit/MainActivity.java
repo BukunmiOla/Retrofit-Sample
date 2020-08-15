@@ -6,6 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.retrofit.dummy.ui.DummyActivity;
+import com.example.retrofit.gorest.ui.GoRestActivity;
+import com.example.retrofit.heroku.ui.HerokuCatFactActivity;
+import com.example.retrofit.poke.ui.PokeActivity;
+import com.example.retrofit.typicode.ui.TypicodeActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

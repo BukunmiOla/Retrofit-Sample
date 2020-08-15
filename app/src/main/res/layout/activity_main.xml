@@ -16,45 +16,45 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-    <Button
-        android:id="@+id/typicode_btn"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="10dp"
-        android:text="JSON PlaceHolder Typicode" />
+        <Button
+            android:id="@+id/typicode_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="JSON PlaceHolder Typicode" />
 
-    <Button
-        android:id="@+id/dummy_api_btn"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="10dp"
-        android:text="Dummy API" />
+        <Button
+                android:id="@+id/heroku_cat_fact_btn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:text="Heroku Cat Fact" />
+        <Button
+            android:id="@+id/dummy_api_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="Dummy API" />
 
-    <Button
-        android:id="@+id/poke_api_btn"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="10dp"
-        android:text="POKE API" />
+        <Button
+            android:id="@+id/poke_api_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="POKE API" />
 
-    <Button
-        android:id="@+id/go_rest_api_btn"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="10dp"
-        android:text="Go Rest Api"/>
+        <Button
+            android:id="@+id/go_rest_api_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="Go Rest Api"/>
 
-    <Button
-        android:id="@+id/heroku_cat_fact_btn"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="10dp"
-        android:text="Heroku Cat Fact" />
 
 
     </LinearLayout>
