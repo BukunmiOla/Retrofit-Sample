@@ -8,8 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.retrofit.dummy.model.DataItem;
-import com.example.retrofit.heroku.model.AllItem;
 import com.example.retrofit.typicode.model.TypicodeAlbums;
 import com.example.retrofit.typicode.model.TypicodeComments;
 import com.example.retrofit.typicode.model.TypicodePhotos;
@@ -20,16 +18,16 @@ import com.example.retrofit.R;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
-public class CustomViewHolder extends RecyclerView.ViewHolder {
+public class TypicodeViewHolder extends RecyclerView.ViewHolder {
 
     private TextView titleTv, bodyTv;
 
-    public CustomViewHolder(@NonNull View itemView) {
+    public TypicodeViewHolder(@NonNull View itemView) {
         super(itemView);
 
     }
 
-    public void bindPhotoData(Context context, TypicodePhotos photo) {
+    public void bindPhotos(Context context, TypicodePhotos photo) {
         titleTv = itemView.findViewById(R.id.title_tv);
         ImageView photoIv = itemView.findViewById(R.id.photo_image_view);
 
@@ -44,7 +42,7 @@ public class CustomViewHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void bindPostsData(TypicodePosts post) {
+    public void bindPosts(TypicodePosts post) {
         getViews();
 
         titleTv.setText(post.getTitle());
@@ -57,7 +55,7 @@ public class CustomViewHolder extends RecyclerView.ViewHolder {
         bodyTv = itemView.findViewById(R.id.post_body_tv);
     }
 
-    public void bindCommentData(TypicodeComments comment) {
+    public void bindComments(TypicodeComments comment) {
         getViews();
 
         titleTv.setText(comment.getName());
@@ -65,14 +63,14 @@ public class CustomViewHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void bindAlbumData(TypicodeAlbums album) {
+    public void bindAlbums(TypicodeAlbums album) {
         bodyTv = itemView.findViewById(R.id.post_body_tv);
 
         bodyTv.setText(album.getTitle());
 
     }
 
-    public void bindToDoData(TypicodeTodo toDo) {
+    public void bindToDos(TypicodeTodo toDo) {
 
         getViews();
 
@@ -99,17 +97,5 @@ public class CustomViewHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void bindDummyData(DataItem data) {
-        getViews();
-        titleTv.setText(data.getEmployeeName());
-        String info = "Salary: " + data.getEmployeeSalary() + "\nAge: " + data.getEmployeeAge();
-        bodyTv.setText(info);
-    }
 
-    public void bindHerokuFacts(AllItem fact) {
-        getViews();
-        titleTv.setText(fact.getText());
-        String info = "Posted by " + fact.getUser() + "\nUpvotes: " + fact.getUpvotes();
-        bodyTv.setText(info);
-    }
 }

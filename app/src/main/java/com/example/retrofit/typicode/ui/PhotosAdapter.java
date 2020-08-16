@@ -13,7 +13,7 @@ import com.example.retrofit.R;
 
 import java.util.List;
 
-public class PhotosAdapter extends RecyclerView.Adapter<CustomViewHolder> {
+public class PhotosAdapter extends RecyclerView.Adapter<TypicodeViewHolder> {
 
     List<TypicodePhotos> mPhotoList;
     private Context context;
@@ -26,16 +26,16 @@ public class PhotosAdapter extends RecyclerView.Adapter<CustomViewHolder> {
 
     @NonNull
     @Override
-    public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TypicodeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.typicode_photos_view_model, parent,false);
-        return new CustomViewHolder(view);
+        return new TypicodeViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TypicodeViewHolder holder, int position) {
 
         final TypicodePhotos photo = mPhotoList.get(position);
-        holder.bindPhotoData(context,photo);
+        holder.bindPhotos(context,photo);
     }
 
     @Override

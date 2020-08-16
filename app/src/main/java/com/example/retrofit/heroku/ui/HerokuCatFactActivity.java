@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.retrofit.R;
 import com.example.retrofit.heroku.model.HerokuAll;
-import com.example.retrofit.heroku.model.HerokuCatFactAdapter;
 import com.example.retrofit.network.GetDataService;
 import com.example.retrofit.network.RetrofitClientInstance;
 

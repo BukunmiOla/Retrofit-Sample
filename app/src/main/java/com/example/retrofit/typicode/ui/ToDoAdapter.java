@@ -12,7 +12,7 @@ import com.example.retrofit.R;
 
 import java.util.List;
 
-public class ToDoAdapter extends RecyclerView.Adapter<CustomViewHolder> {
+public class ToDoAdapter extends RecyclerView.Adapter<TypicodeViewHolder> {
     List<TypicodeTodo> toDoList;
     public ToDoAdapter(List<TypicodeTodo> toDoList){
         this.toDoList = toDoList;
@@ -21,15 +21,15 @@ public class ToDoAdapter extends RecyclerView.Adapter<CustomViewHolder> {
 
     @NonNull
     @Override
-    public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TypicodeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.others_view_model, parent,false);
-        return new CustomViewHolder(view);
+        return new TypicodeViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TypicodeViewHolder holder, int position) {
         final TypicodeTodo toDo = toDoList.get(position);
-        holder.bindToDoData(toDo);
+        holder.bindToDos(toDo);
     }
 
     @Override
